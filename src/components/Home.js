@@ -23,7 +23,7 @@ export default function Home() {
     }, [last_block_number]);
 
     useEffect(() => {
-        const provider = new ethers.InfuraProvider(null, "c3af19888ca14fbb819f0795aed71283");
+        const provider = new ethers.providers.InfuraProvider(null, "c3af19888ca14fbb819f0795aed71283");
         const interval = setInterval(() => {
             getBlock(provider);
         }, 2000);

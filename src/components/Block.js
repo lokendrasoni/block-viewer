@@ -27,7 +27,7 @@ export default function Block({ block, setSelectedBlock }) {
                       <th>{transaction.hash}</th>
                       <td>{transaction.from}</td>
                       <td>{transaction.to}</td>
-                      <td>{transaction.value}</td>
+                      <td>{parseInt(transaction.value._hex) / (Math.pow(10,18))} ETH</td>
                     </tr>
                   );
                 })
